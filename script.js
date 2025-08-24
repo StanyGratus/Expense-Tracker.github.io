@@ -217,6 +217,10 @@ function addMessage(sender, text) {
 }
 function getBotResponse(input) {
   input = input.toLowerCase();
+   // ---- HELP ----
+  if (input.includes("help")) {
+    return `Ask me total, highest, lowest, average expenses and get a summary based on categories, date or month.`;
+  }
 
   if (filteredExpenses.length === 0) {
     return "No expenses found. Try adding some or adjusting filters.";
@@ -337,10 +341,7 @@ function getBotResponse(input) {
     }
   }
 
-  // ---- HELP ----
-  if (input.includes("help")) {
-    return `Ask me total, highest, lowest, average expenses and get a summary based on categories, date or month.`;
-  }
+ 
 
   return "Sorry, I didn't understand. Try 'help' for examples.";
 }
@@ -348,4 +349,5 @@ function getBotResponse(input) {
 
 // Initialize
 applyFilters();
+
 
