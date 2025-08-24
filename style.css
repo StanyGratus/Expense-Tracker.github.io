@@ -67,7 +67,13 @@ main {
   transition: 0.3s;
   border: none;
   border-radius: 8px;
+  margin-left:5px;
   padding: 10px;
+}
+.card3 input,select{
+  padding: 8px;
+  margin-left: 5px;
+  font-weight: 500;
 }
 
 .card3{
@@ -132,7 +138,6 @@ th, td {
 /* Charts */
 .charts {
   display: grid;
-  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
@@ -142,6 +147,14 @@ canvas {
   max-height: 350px;
   width: 100%;
   display: block;
+}
+.charts #donutChart{
+  max-width: 400px;
+  max-height: 300px;
+}
+.charts #dateBarChart, .charts #monthBarChart{
+  max-width: 500px;
+  height: 700px;
 }
 
 /* Chatbot */
@@ -228,3 +241,4 @@ body{
   overflow-x: hidden;
 }
 } */
+
