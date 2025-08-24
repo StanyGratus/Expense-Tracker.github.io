@@ -339,12 +339,7 @@ function getBotResponse(input) {
 
   // ---- HELP ----
   if (input.includes("help")) {
-    return `I can answer:
-    - "total"
-    - "highest category {category-name}" | "highest month {month like "2025-08" format}" | "highest date {date like "2025-08-15" format}"
-    - "lowest category {category-name}" | "lowest month {month like "2025-08" format}" | "lowest date {date like "2025-08-15" format}"
-    - "average month {month like "2025-08" format}" | "average date {date like "2025-08-15" format}" | "average category {category-name}"
-    - "summary category" | "summary month" | "summary date"`;
+    return `Ask me total, highest, lowest, average expenses and get a summary based on categories, date or month.`;
   }
 
   return "Sorry, I didn't understand. Try 'help' for examples.";
@@ -353,3 +348,4 @@ function getBotResponse(input) {
 
 // Initialize
 applyFilters();
+
