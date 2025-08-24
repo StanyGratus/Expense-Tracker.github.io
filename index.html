@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1> Expense Tracker</h1>
+  </header>
+
+  <main>
+    <!-- Card 1: Add Expense -->
+    <section class="card1">
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <input type="text" id="expense-name" placeholder="Expense Name" required>
+        <input type="number" id="expense-amount" placeholder="Amount (₹)" required>
+        <select id="expense-category" required>
+          <option value="">Select Category</option>
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Shopping</option>
+          <option>Entertainment</option>
+          <option>Other</option>
+        </select>
+        <input type="date" id="expense-date" required>
+        <button type="submit"><b>ADD</b></button>
+      </form>
+      <p class="total-expense">Total Expenses: ₹<span id="total-expense">0</span></p>
+    </section>
+     <!-- Card 3: Graphs -->
+    <section class="card3">
+      <h2>Visual Insights</h2>
+      <div class="charts">
+        <canvas id="donutChart"></canvas>
+        <canvas id="dateBarChart"></canvas>
+        <canvas id="monthBarChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Card 2: Filters & Expense List -->
+    <section class="card2">
+      <h2>Filter & View Expenses</h2>
+      <div class="filters">
+        <input type="month" id="filter-month">
+        <input type="date" id="filter-date">
+        <select id="filter-category">
+          <option value="">All Categories</option>
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Shopping</option>
+          <option>Entertainment</option>
+          <option>Other</option>
+        </select>
+        <button id="apply-filters">Apply Filters</button>
+        <button id="reset-filters">Reset</button>
+      </div>
+      <table id="expense-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount (₹)</th>
+            <th>Category</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+        <h3 class="total-expense" style="text-align: center; font-size: 20px;">SubTotal Expenses: ₹<span id="subtotal-expense">0</span></h3>
+      </table>
+    </section>
+    </main>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+    <div class="chatbot-icon">💬</div>
+    <div class="chatbot-window">
+      <div class="chatbot-header">Chat-Bot Assistant</div>
+      <div class="chatbot-messages" id="chatbot-messages"></div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbot-input" placeholder="Type a message...">
+        <button id="chatbot-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
