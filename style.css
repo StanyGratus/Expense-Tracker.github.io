@@ -51,6 +51,7 @@ main {
 }
 .card3{
   margin-left: 30px;
+  max-width: 700px;
   background: white;
   padding: 1rem;
   flex:1;
@@ -242,6 +243,7 @@ body{
   overflow-x: hidden;
 }
 } */
+
 
 
 
