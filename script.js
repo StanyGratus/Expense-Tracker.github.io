@@ -34,7 +34,7 @@ function renderExpenses(list) {
       <td>₹${exp.amount}</td>
       <td>${exp.category}</td>
       <td>${exp.date}</td>
-      <td><button class="del-btn" style="background-color:red; color:white; border-radius:30px">Delete</button></td>
+      <td><button class="del-btn" style="background-color:red; color:white; border-radius:30px, padding:5px">Delete</button></td>
     `;
     expenseList.appendChild(row);
     row.querySelector(".del-btn").addEventListener("click", (e) => {
@@ -345,6 +345,7 @@ function getBotResponse(input) {
 
   return "Sorry, I didn't understand. Try 'help' for examples.";
 }
+
 
 
 
