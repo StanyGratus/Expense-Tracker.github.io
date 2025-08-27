@@ -61,8 +61,6 @@ main {
 }
 .card3 .filters{
   padding: 20px;
-  display:flex;
-  flex-wrap:wrap
 }
 .card3 .filters button{
   background: #2563eb;
@@ -220,6 +218,7 @@ canvas {
 .chatbot-input button:hover {
   background: #1e40af;
 }
+
 
 
 
