@@ -64,7 +64,7 @@ main {
   display:flex;
   flex-wrap:wrap
 }
-.card3 button{
+.card3 .filters button{
   background: #2563eb;
   color: white;
   cursor: pointer;
@@ -74,7 +74,7 @@ main {
   margin-left:7px;
   padding: 15px;
 }
-.card3 button:hover {
+.card3 .filters button:hover {
   background: #1e40af;
 }
 .card3 input,select{
@@ -218,6 +218,7 @@ canvas {
 .chatbot-input button:hover {
   background: #1e40af;
 }
+
 
 
 
