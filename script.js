@@ -210,6 +210,9 @@ function sendMessage() {
 
 function addMessage(sender, text) {
   const msg = document.createElement("div");
+  msg.style="margin-bottom:10px; padding:8px; border-radius:5px; max-width:80%;"
+  msg.style.backgroundColor = sender === "YOU" ? "#e0f2fe" : "#d1fae5";
+  msg.style.color = sender === "YOU" ? "blue" : "green";
   msg.textContent = `${sender}: ${text}`;
   chatbotMessages.appendChild(msg);
   chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
@@ -344,6 +347,9 @@ function getBotResponse(input) {
 
   return "Sorry, I didn't understand. Try 'help' for examples.";
 }
+
+//Intialise
+applyFilters()
 
 
 
