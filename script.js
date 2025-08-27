@@ -70,7 +70,7 @@ function applyFilters() {
 }
 
 // Charts
-// 
+
 let donutChart, dateBarChart, monthBarChart;
 
 function updateCharts(list) {
@@ -226,7 +226,7 @@ function getBotResponse(input) {
     return "No expenses found. Try adding some or adjusting filters.";
   }
 
-  // Helper functions
+  
   const getTotal = (list) => list.reduce((sum, exp) => sum + exp.amount, 0);
   const getHighest = (list) => list.reduce((max, exp) => exp.amount > max.amount ? exp : max, list[0]);
   const getLowest = (list) => list.reduce((min, exp) => exp.amount < min.amount ? exp : min, list[0]);
@@ -347,7 +347,7 @@ function getBotResponse(input) {
 }
 
 
-// Initialize
-applyFilters();
+
+
 
 
