@@ -149,7 +149,7 @@ canvas {
 }
 .charts #dateBarChart, .charts #monthBarChart{
   max-width: 500px;
-  height: 800px;
+  height: 600px;
 }
 
 /* Chatbot */
@@ -220,6 +220,7 @@ canvas {
 .chatbot-input button:hover {
   background: #1e40af;
 }
+
 
 
 
