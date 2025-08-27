@@ -1,7 +1,8 @@
+
 let expenses = [];
 let filteredExpenses = [];
 
-const expense_table=document.getElementById("espense-table")
+const expense_table=document.getElementById("expense-table")
 const form = document.getElementById("expense-form");
 const totalExpenseEl = document.getElementById("total-expense");
 const subtotalExpenseEl = document.getElementById("subtotal-expense");
@@ -34,7 +35,7 @@ function renderExpenses(list) {
       <td>₹${exp.amount}</td>
       <td>${exp.category}</td>
       <td>${exp.date}</td>
-      <td><button style="background-color:red; color:white ; padding: 5px; border: none; cursor: pointer; border-radius: 8px">Delete</button></td> `;
+      <td><button class="del-btn" style="background-color:red; color:white ; padding: 5px; border: none; cursor: pointer; border-radius: 8px">Delete</button></td> `;
     expenseList.appendChild(row);
     row.querySelector(".del-btn").addEventListener("click", (e) => {
      row.remove();  
@@ -200,11 +201,11 @@ chatbotInput.addEventListener("keypress", (e) => {
 function sendMessage() {
   const text = chatbotInput.value.trim();
   if (!text) return;
-  addMessage("You", text);
+  addMessage("YOU", text);
   chatbotInput.value = "";
 
   setTimeout(() => {
-    addMessage("Bot", getBotResponse(text));
+    addMessage("BOT", getBotResponse(text));
   }, 500);
 }
 
@@ -221,7 +222,7 @@ function getBotResponse(input) {
   input = input.toLowerCase();
    // ---- HELP ----
   if (input.includes("help")) {
-    return `Ask me total, highest, lowest, average expenses and get a summary based on categories, date or month.`;
+    return `Ask me total, highest, lowest, average expenses, summary based on categories, date or month   Eg: 1) summary category food      2) highest on date 2027-08-27      3) lowest on month 2027-08 .`;
   }
 
   if (filteredExpenses.length === 0) {
@@ -350,6 +351,10 @@ function getBotResponse(input) {
 
 //Intialise
 applyFilters()
+
+
+
+
 
 
 
