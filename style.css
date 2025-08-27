@@ -72,6 +72,7 @@ main {
   border: none;
   border-radius: 8px;
   margin-left:7px;
+  margin-top:6px;
   padding: 15px;
 }
 .card3 .filters button:hover {
@@ -81,6 +82,7 @@ main {
   padding: 0.6rem;
   border: 1px solid #ddd;
   border-radius: 8px;
+  margin-top:6px;
   margin-left: 5px;
   font-weight: 500;
 }
@@ -218,6 +220,7 @@ canvas {
 .chatbot-input button:hover {
   background: #1e40af;
 }
+
 
 
 
